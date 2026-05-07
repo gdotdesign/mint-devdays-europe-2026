@@ -1,0 +1,9 @@
+{
+  "application": {
+    "title": "Mint - DevDays Europe 2026",
+    "head": "assets/head.html"
+  },
+  "source-directories": [
+    "source"
+  ]
+}
