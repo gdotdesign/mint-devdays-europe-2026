@@ -64,14 +64,6 @@ component Presenter {
     "#{minutesFormatted}:#{secondsFormatted}"
   }
 
-  fun padTwo (n : Number) {
-    if n < 10 {
-      "0#{n}"
-    } else {
-      "#{n}"
-    }
-  }
-
   style root {
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;

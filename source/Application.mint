@@ -51,6 +51,33 @@ store Application {
           "framework-plus-five-libraries stack we usually throw at it. " \
           "That's the whole detour on AI. We'll come back to both of these " \
           "questions by the end of the talk."
+      },
+      {
+        render: () { <Slides.TheStack/> },
+        notes:
+          "So let's start with the first question. Why another language? " \
+          "Mint is specifically about single-page applications — the kind " \
+          "with routing, state, forms, real-time updates, the works. And " \
+          "here's what shipping one of those actually looks like in 2026. A " \
+          "framework. A type system. A state manager. A router. A styling " \
+          "solution. A bundler. A test runner. A linter. (pause and let the " \
+          "audience read) Bunch independent decisions, bunch of tools that " \
+          "need to agree on conventions, configs, and versions. And we " \
+          "haven't even talked about the app yet. This is the soup we're " \
+          "swimming in — and it's the thing Mint is reacting to."
+      },
+      {
+        render: () { <Slides.MintHasItAll/> },
+        notes:
+          "Now the same picture, but with Mint. Same eight boxes — the " \
+          "problems didn't go away. You still need a view layer, you " \
+          "still need state, you still need a router. (pause) But " \
+          "instead of eight tools that have to negotiate with each " \
+          "other, it's one language with all of this baked in. One way " \
+          "to define a component. One way to handle state. One way to " \
+          "style. No glue code, no config files arguing about " \
+          "module formats, no version mismatches at 2 AM. That's the " \
+          "pitch in one slide."
       }
     ]
 

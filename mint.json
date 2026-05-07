@@ -1,7 +1,11 @@
 {
   "application": {
     "title": "Mint - DevDays Europe 2026",
-    "head": "assets/head.html"
+    "head": "assets/head.html",
+    "icon": "assets/favicon.png",
+    "meta": {
+          "viewport": "width=device-width, initial-scale=1, user-scalable=no"
+        }
   },
   "source-directories": [
     "source"
