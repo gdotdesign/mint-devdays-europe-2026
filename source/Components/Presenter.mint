@@ -1,5 +1,12 @@
 component Presenter {
-  connect Application exposing { slide, notes, status }
+  connect Application exposing {
+    expectedElapsed,
+    duration,
+    position,
+    status,
+    slide,
+    notes
+  }
 
   use Provider.Tick { ticks: tick }
 
@@ -44,6 +51,20 @@ component Presenter {
     }
   }
 
+  get pace : Number {
+    talkElapsed - expectedElapsed * 1000
+  }
+
+  get paceLabel : String {
+    if pace == 0 {
+      "on time"
+    } else if pace > 0 {
+      "+#{formatElapsed(pace)} behind"
+    } else {
+      "−#{formatElapsed(0 - pace)} ahead"
+    }
+  }
+
   fun formatElapsed (ms : Number) : String {
     let totalSeconds =
       Math.floor(ms / 1000)
@@ -72,6 +93,7 @@ component Presenter {
 
     background: #111;
     padding: 1vmax;
+    min-height: 0;
     color: #EEE;
 
     font-family: Noto Sans;
@@ -125,20 +147,40 @@ component Presenter {
     font-size: 2vmax;
   }
 
+  style timer-budget {
+    font-size: 1vmax;
+    color: #888;
+  }
+
+  style position {
+    padding: 0.75vmax 1vmax;
+    border-radius: 0.25vmax;
+    background: #1A1A1A;
+
+    text-align: center;
+    font-style: italic;
+    font-size: 1vmax;
+    color: #BBB;
+  }
+
   fun render : Html {
     <div::root>
       <div::slide><Display/></div>
       <div::notes>notes</div>
 
       <div::timers>
+        <div::position>position</div>
+
         <div::timer>
           <div::timer-label>"Talk"</div>
           <div::timer-value>formatElapsed(talkElapsed)</div>
+          <div::timer-budget>paceLabel</div>
         </div>
 
         <div::timer>
           <div::timer-label>"Slide"</div>
           <div::timer-value>formatElapsed(slideElapsed)</div>
+          <div::timer-budget>"of #{formatElapsed(duration * 1000)}"</div>
         </div>
       </div>
     </div>

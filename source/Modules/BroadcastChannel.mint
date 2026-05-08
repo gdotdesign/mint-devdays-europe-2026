@@ -9,7 +9,7 @@ module BroadcastChannel {
   ) : BroadcastChannel {
     `
     (() => {
-      const channel = new BroadcastChannel("slides");
+      const channel = new BroadcastChannel(#{name});
       channel.onmessage = (event) => { #{callback(`event.data`)} }
       return #{{native: `channel`}}
     })()

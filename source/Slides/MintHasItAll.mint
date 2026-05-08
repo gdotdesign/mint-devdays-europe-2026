@@ -92,7 +92,7 @@ component Slides.MintHasItAll {
   fun render {
     <Slide>
       <div>
-        <div::heading>"It's all just Mint."</div>
+        <div::heading>"…and Mint gives you all of this,"</div>
 
         <div::grid>
           for item of ITEMS {

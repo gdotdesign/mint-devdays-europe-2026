@@ -103,7 +103,7 @@ component Slides.TheStack {
   fun render {
     <Slide>
       <div>
-        <div::heading>"Single-page apps are usually built with:"</div>
+        <div::heading>"The Single Page Application checklist:"</div>
 
         <div::grid>
           for item of ITEMS {
@@ -118,7 +118,7 @@ component Slides.TheStack {
           }
         </div>
 
-        <div::footnote>"* optional but recommended for sanity"</div>
+        <div::footnote>"*optional but recommended for sanity"</div>
       </div>
     </Slide>
   }
