@@ -26,6 +26,7 @@ component LiveEditor {
     transform: scale(#{scale});
     height: #{100 / scale}%;
     width: #{100 / scale}%;
+    min-height: 0;
     display: grid;
   }
 

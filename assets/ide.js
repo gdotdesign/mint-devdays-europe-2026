@@ -66,6 +66,14 @@ var ih=Object.create;var Or=Object.defineProperty;var nh=Object.getOwnPropertyDe
           min-height: 0;
           display: grid;
         }
+
+        .sh-keyword { color: var(--color-darkmagenta); }
+        .sh-regexp { color: var(--color-darkorange); }
+        .sh-namespace, .sh-property { color: var(--color-indianred); }
+        .sh-type { color: var(--color-royalblue); }
+        .sh-string { color: var(--color-mintgreen); }
+        .sh-comment { color: var(--color-comment); }
+        .sh-number { color: var(--color-crimson); }
       </style>
 
       <div class="ide">

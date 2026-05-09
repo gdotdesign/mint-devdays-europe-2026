@@ -105,6 +105,53 @@ store Application {
           "render' with the onClick handler — view and behavior, same " \
           "place. Point. Then: type something to make it real. Change the " \
           "button text, bump the font-size, whatever the audience suggests."
+      },
+      {
+        render: () { <Slides.LanguageTypesIntro/> },
+        position: "step back from lectern, stage center",
+        duration: 30,
+        notes:
+          "Now I want to spend a few minutes on the language itself. Three " \
+          "things in this section — variants with exhaustive matching, " \
+          "records and stores. The throughline is: the type system isn't " \
+          "bolted on, it's how you describe your data and the compiler " \
+          "keeps you honest."
+      },
+      {
+        render: () { <Slides.Variants/> },
+        position: "lectern — point at the case block",
+        duration: 50,
+        notes:
+          "Variants. A closed set of constructors, some carry payloads. " \
+          "(point at Status) The 'case' below is exhaustive — if I delete " \
+          "one of these branches the compiler refuses to build. That's the " \
+          "part that matters: you can't forget the loading state, you can't " \
+          "forget the error state, the compiler walks the whole shape with " \
+          "you. (click through the buttons)"
+      },
+      {
+        render: () { <Slides.Records/> },
+        position: "lectern — point at the editor",
+        duration: 50,
+        notes:
+          "Records first. You declare them with 'type', fields are typed, " \
+          "values are immutable. (point at the type) The update syntax — '{ " \
+          "user | age: ... }' — gives you a new record with that field " \
+          "replaced. No mutation, no spread soup. (click Birthday a couple " \
+          "of times) Same component shape you saw before — state, style, " \
+          "render — just with structured data now."
+      },
+      {
+        render: () { <Slides.Stores/> },
+        position: "lectern — point at `connect`",
+        duration: 50,
+        notes:
+          "And stores — shared state, still typed. A store has its own " \
+          "state and functions. Any component that needs them uses " \
+          "'connect' to expose them, and from then on they read like local " \
+          "fields. (point at connect) No context providers, no reducers, no " \
+          "selectors — one keyword, the types flow through. This is also " \
+          "how the deck you're watching is wired together."
       }
     ]
 
