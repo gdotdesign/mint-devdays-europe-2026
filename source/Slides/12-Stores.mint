@@ -1,8 +1,6 @@
 component Slides.Stores {
   const CODE =
     <<~MINT
-    // Stores: typed shared state. Components `connect`
-    // to expose fields and functions as if local.
     store Counter {
       state value : Number = 0
 
@@ -10,15 +8,24 @@ component Slides.Stores {
       fun reset { next { value: 0 } }
     }
 
-    component Main {
-      connect Counter exposing { value, increment, reset }
+    component GlobalCounter {
+      connect Counter exposing { value }
 
       fun render : Html {
         <div>
           <div>"Count: \#{value}"</div>
 
-          <button onClick={(_ : Html.Event) { increment() }}>"+1"</button>
-          <button onClick={(_ : Html.Event) { reset() }}>"reset"</button>
+          <button onClick={Counter.increment}>"+1"</button>
+          <button onClick={Counter.reset}>"reset"</button>
+        </div>
+      }
+    }
+    component Main {
+
+      fun render : Html {
+        <div>
+          <GlobalCounter/>
+          <GlobalCounter/>
         </div>
       }
     }

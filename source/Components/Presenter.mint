@@ -86,14 +86,15 @@ component Presenter {
   }
 
   style root {
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
     display: grid;
     gap: 0.5vmax;
 
     background: #111;
     padding: 1vmax;
-    min-height: 0;
+    height: 100vh;
+    width: 100vw;
     color: #EEE;
 
     font-family: Noto Sans;
@@ -102,10 +103,34 @@ component Presenter {
 
   style slide {
     border-radius: 0.25vmax;
-    grid-column: span 2;
+    aspect-ratio: 16 / 9;
+    place-self: center;
+
     position: relative;
     overflow: hidden;
+    display: block;
+
+    width: 100%;
+    max-height: 100%;
+    background: #FCFCFC;
+  }
+
+  style slide-scale {
+    transform-origin: top left;
+    transform: scale(0.5);
+
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
+
+  style sidebar {
+    grid-template-rows: auto 1fr auto;
     display: grid;
+    gap: 0.5vmax;
+    min-height: 0;
   }
 
   style notes {
@@ -113,13 +138,18 @@ component Presenter {
     background: #1A1A1A;
     padding: 1vmax;
 
-    font-size: 1.25vmax;
+    font-family: "Fira Code", monospace;
+    white-space: pre-wrap;
+    font-size: 1vmax;
     line-height: 1.5;
+
+    overflow: auto;
+    min-height: 0;
   }
 
   style timers {
+    grid-template-columns: 1fr 1fr;
     font-variant-numeric: tabular-nums;
-    text-align: right;
 
     display: grid;
     gap: 0.5vmax;
@@ -128,7 +158,7 @@ component Presenter {
   style timer {
     align-items: center;
     display: grid;
-    gap: 1vmax;
+    gap: 0.5vmax;
 
     border-radius: 0.25vmax;
     background: #1A1A1A;
@@ -144,10 +174,12 @@ component Presenter {
   }
 
   style timer-value {
+    text-align: center;
     font-size: 2vmax;
   }
 
   style timer-budget {
+    text-align: center;
     font-size: 1vmax;
     color: #888;
   }
@@ -165,22 +197,26 @@ component Presenter {
 
   fun render : Html {
     <div::root>
-      <div::slide><Display/></div>
-      <div::notes>notes</div>
+      <div::slide>
+        <div::slide-scale><Display/></div>
+      </div>
 
-      <div::timers>
+      <div::sidebar>
         <div::position>position</div>
+        <div::notes>notes</div>
 
-        <div::timer>
-          <div::timer-label>"Talk"</div>
-          <div::timer-value>formatElapsed(talkElapsed)</div>
-          <div::timer-budget>paceLabel</div>
-        </div>
+        <div::timers>
+          <div::timer>
+            <div::timer-label>"Talk"</div>
+            <div::timer-value>formatElapsed(talkElapsed)</div>
+            <div::timer-budget>paceLabel</div>
+          </div>
 
-        <div::timer>
-          <div::timer-label>"Slide"</div>
-          <div::timer-value>formatElapsed(slideElapsed)</div>
-          <div::timer-budget>"of #{formatElapsed(duration * 1000)}"</div>
+          <div::timer>
+            <div::timer-label>"Slide"</div>
+            <div::timer-value>formatElapsed(slideElapsed)</div>
+            <div::timer-budget>"of #{formatElapsed(duration * 1000)}"</div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,28 +1,22 @@
-component Slides.MintHasItAll {
+type StackItem {
+  category : String,
+  example : String
+}
+
+component Slides.TheStack {
   const ITEMS =
     [
-      "View",
-      "State",
-      "Routing",
-      "Styling",
-      "Type system",
-      "Bundler",
-      "Tests",
-      "Linter"
+      { category: "View", example: "React" },
+      { category: "State", example: "Redux" },
+      { category: "Routing", example: "React Router" },
+      { category: "Styling", example: "styled-components" },
+      { category: "Type system*", example: "TypeScript" },
+      { category: "Bundler*", example: "Vite" },
+      { category: "Tests*", example: "Vitest" },
+      { category: "Linter*", example: "ESLint" }
     ]
 
-  const ICON =
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      fill="none"
-      height="24"
-      width="24"
-    ><path d="M5 12l5 5l10 -10"/></svg>
+  const ICON = TablerIcons.HELP_CIRCLE
 
   style heading {
     font-family: Forum;
@@ -64,7 +58,7 @@ component Slides.MintHasItAll {
   }
 
   style mark {
-    color: #2e8b57;
+    color: #b86b00;
 
     svg {
       position: relative;
@@ -84,7 +78,7 @@ component Slides.MintHasItAll {
     font-size: 2vmax;
   }
 
-  style answer {
+  style example {
     font-size: 1.2vmax;
     opacity: 0.55;
   }
@@ -92,7 +86,7 @@ component Slides.MintHasItAll {
   fun render {
     <Slide>
       <div>
-        <div::heading>"…and Mint gives you all of this,"</div>
+        <div::heading>"The Single Page Application checklist:"</div>
 
         <div::grid>
           for item of ITEMS {
@@ -100,14 +94,14 @@ component Slides.MintHasItAll {
               <div::mark>ICON</div>
 
               <div::label>
-                <div::category>item</div>
-                <div::answer>"Built-in"</div>
+                <div::category>item.category</div>
+                <div::example>"e.g. #{item.example}"</div>
               </div>
             </div>
           }
         </div>
 
-        <div::footnote>"…and more. No glue, no config soup."</div>
+        <div::footnote>"*optional but recommended for sanity"</div>
       </div>
     </Slide>
   }

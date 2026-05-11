@@ -1,39 +1,17 @@
-type StackItem {
-  category : String,
-  example : String
-}
-
-component Slides.TheStack {
+component Slides.MintHasItAll {
   const ITEMS =
     [
-      { category: "View", example: "React" },
-      { category: "State", example: "Redux" },
-      { category: "Routing", example: "React Router" },
-      { category: "Styling", example: "styled-components" },
-      { category: "Type system*", example: "TypeScript" },
-      { category: "Bundler*", example: "Vite" },
-      { category: "Tests*", example: "Vitest" },
-      { category: "Linter*", example: "ESLint" }
+      "View",
+      "State",
+      "Routing",
+      "Styling",
+      "Type system",
+      "Bundler",
+      "Tests",
+      "Linter"
     ]
 
-  const ICON =
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      fill="none"
-      height="24"
-      width="24"
-    >
-      <path
-        d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"
-      />
-
-      <path d="M12 19l0 .01"/>
-    </svg>
+  const ICON = TablerIcons.CHECK
 
   style heading {
     font-family: Forum;
@@ -75,7 +53,7 @@ component Slides.TheStack {
   }
 
   style mark {
-    color: #b86b00;
+    color: #2e8b57;
 
     svg {
       position: relative;
@@ -95,7 +73,7 @@ component Slides.TheStack {
     font-size: 2vmax;
   }
 
-  style example {
+  style answer {
     font-size: 1.2vmax;
     opacity: 0.55;
   }
@@ -103,7 +81,7 @@ component Slides.TheStack {
   fun render {
     <Slide>
       <div>
-        <div::heading>"The Single Page Application checklist:"</div>
+        <div::heading>"…and Mint gives you all of this,"</div>
 
         <div::grid>
           for item of ITEMS {
@@ -111,14 +89,14 @@ component Slides.TheStack {
               <div::mark>ICON</div>
 
               <div::label>
-                <div::category>item.category</div>
-                <div::example>"e.g. #{item.example}"</div>
+                <div::category>item</div>
+                <div::answer>"Built-in"</div>
               </div>
             </div>
           }
         </div>
 
-        <div::footnote>"*optional but recommended for sanity"</div>
+        <div::footnote>"…and more. No glue, no config soup."</div>
       </div>
     </Slide>
   }
