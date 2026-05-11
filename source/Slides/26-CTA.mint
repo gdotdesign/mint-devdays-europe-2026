@@ -12,14 +12,9 @@ component Slides.CTA {
     margin: 0 auto;
   }
 
-  style url {
-    font-family: Forum;
-    text-align: center;
-    font-size: 3vmax;
-  }
-
   style links {
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     display: flex;
@@ -45,22 +40,21 @@ component Slides.CTA {
     <Slide>
       <div::root>
         <div::logo><Logo/></div>
-        <div::url>"mint-lang.com"</div>
 
         <div::links>
           <div::link>
+            TablerIcons.CODE
+            <div>"https://mint-lang.com/sandbox/try"</div>
+          </div>
+
+          <div::link>
             TablerIcons.BRAND_GITHUB
-            <div>"github.com/mint-lang/mint"</div>
+            <div>"https://github.com/mint-lang/mint"</div>
           </div>
 
           <div::link>
             TablerIcons.BRAND_DISCORD
-            <div>"discord.gg/mint-lang"</div>
-          </div>
-
-          <div::link>
-            TablerIcons.CODE
-            <div>"mint-lang.com/playground"</div>
+            <div>"https://discord.gg/NXFUJs2"</div>
           </div>
         </div>
       </div>
