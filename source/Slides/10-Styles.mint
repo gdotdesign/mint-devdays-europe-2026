@@ -33,6 +33,6 @@ component Slides.Styles {
     MINT
 
   fun render {
-    <Slide.Live heading="Styles: real CSS, scoped, dynamic" code={CODE}/>
+    <Slide.Live heading=<>"Styles - real CSS, scoped, dynamic"</> code={CODE}/>
   }
 }

@@ -15,13 +15,15 @@ component Slide.Image {
 
   style heading {
     font-family: Forum;
-    font-size: 4vmax;
     text-align: center;
+    font-size: 3vmax;
+    opacity: 0.85;
   }
 
   style image {
+    border: 1px solid var(--border-color);
     object-fit: contain;
-    max-height: 70vh;
+    max-height: 65vh;
     max-width: 100%;
     margin: 0 auto;
     display: block;

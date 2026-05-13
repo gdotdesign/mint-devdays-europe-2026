@@ -58,7 +58,12 @@ component Main {
     <div::root>
       case status {
         Presenter => <Presenter/>
-        Display => <Display/>
+
+        Display =>
+          <>
+            <Display/>
+            <Hud/>
+          </>
       }
     </div>
   }

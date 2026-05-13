@@ -19,6 +19,8 @@ component LiveEditor {
     display: grid;
     height: 100%;
     width: 100%;
+    min-height: 0;
+    min-width: 0;
   }
 
   style inner {

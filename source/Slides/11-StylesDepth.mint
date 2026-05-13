@@ -35,6 +35,6 @@ component Slides.StylesDepth {
     MINT
 
   fun render {
-    <Slide.Live heading="Styles: parameters & sub-selectors" code={CODE}/>
+    <Slide.Live heading=<>"Styles - parameters & sub-selectors"</> code={CODE}/>
   }
 }

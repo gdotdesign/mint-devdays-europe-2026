@@ -34,7 +34,6 @@ component Slides.StandardLibrary {
     ]
 
   style root {
-    grid-template-rows: auto 1fr;
     place-content: center;
     grid-row-gap: 3vmax;
     display: grid;
@@ -45,8 +44,9 @@ component Slides.StandardLibrary {
 
   style heading {
     font-family: Forum;
-    font-size: 4vmax;
     text-align: center;
+    font-size: 3vmax;
+    opacity: 0.85;
   }
 
   style grid {
@@ -81,7 +81,7 @@ component Slides.StandardLibrary {
   fun render {
     <Slide>
       <div::root>
-        <div::heading>"Batteries included."</div>
+        <div::heading>"Batteries included"</div>
 
         <div::grid>
           for module of MODULES {

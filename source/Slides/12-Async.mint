@@ -46,6 +46,6 @@ component Slides.Async {
     MINT
 
   fun render {
-    <Slide.Live heading="Async: await + variants" code={CODE}/>
+    <Slide.Live heading=<>"Async - await + variants"</> code={CODE}/>
   }
 }

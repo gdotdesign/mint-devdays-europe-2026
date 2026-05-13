@@ -32,6 +32,6 @@ component Slides.Stores {
     MINT
 
   fun render {
-    <Slide.Live heading="Stores: shared state, typed" code={CODE}/>
+    <Slide.Live heading=<>"Stores - shared state, typed"</> code={CODE}/>
   }
 }

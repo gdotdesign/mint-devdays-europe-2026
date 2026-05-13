@@ -43,6 +43,6 @@ component Slides.Routing {
     MINT
 
   fun render {
-    <Slide.Live heading="Routing" code={CODE}/>
+    <Slide.Live heading=<>"Routing"</> code={CODE}/>
   }
 }

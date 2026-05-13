@@ -7,8 +7,8 @@ component Slides.Types {
     }
 
     type LoginResult {
-      LoggedIn(User)
       Rejected(String)
+      LoggedIn(User)
       Pending
     }
 
@@ -31,11 +31,15 @@ component Slides.Types {
             }
           </div>
 
-          <button onClick={() { next { result: LoggedIn({ name: "Gus", age: 38 }) } }}>
+          <button onClick={() {
+            next { result: LoggedIn({ name: "Gus", age: 38 }) }
+          }}>
             "Log in"
           </button>
 
-          <button onClick={() { next { result: Rejected("bad password") } }}>
+          <button onClick={() {
+            next { result: Rejected("bad password") }
+          }}>
             "Fail"
           </button>
 
@@ -48,6 +52,6 @@ component Slides.Types {
     MINT
 
   fun render {
-    <Slide.Live heading="Types: variants & records" code={CODE}/>
+    <Slide.Live heading=<>"Types - variants & records"</> code={CODE}/>
   }
 }

@@ -21,6 +21,9 @@ component Slides.Interop {
     MINT
 
   fun render {
-    <Slide.Live heading="Interop: drop into JS when you must" code={CODE}/>
+    <Slide.Live
+      heading=<>"Interop - drop into JavaScript when you must"</>
+      code={CODE}
+    />
   }
 }

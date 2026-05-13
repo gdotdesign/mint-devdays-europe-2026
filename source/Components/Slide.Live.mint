@@ -1,7 +1,7 @@
 component Slide.Live {
-  property heading : String = ""
-  property code : String = ""
   property scale : Number = 1.2
+  property heading : Html
+  property code : String
 
   style root {
     grid-template-rows: auto 1fr;
@@ -16,6 +16,11 @@ component Slide.Live {
     text-align: center;
     font-size: 3vmax;
     opacity: 0.85;
+
+    b {
+      font-weight: normal;
+      color: #277944;
+    }
   }
 
   style editorWrap {

@@ -1,6 +1,5 @@
 component Slides.Recap {
   style root {
-    grid-template-rows: auto 1fr;
     place-content: center;
     grid-row-gap: 3vmax;
     display: grid;
@@ -12,7 +11,7 @@ component Slides.Recap {
   style heading {
     font-family: Forum;
     text-align: center;
-    font-size: 4vmax;
+    font-size: 3.5vmax;
     opacity: 0.85;
   }
 

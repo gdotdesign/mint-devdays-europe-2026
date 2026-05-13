@@ -562,6 +562,10 @@ store Application {
     `window.open(#{Status.path(Status.Presenter(Status.index(status)))}, "presenter", "popup")`
   }
 
+  fun switchToPresenter {
+    Window.navigate(Status.path(Status.Presenter(Status.index(status))))
+  }
+
   get slide {
     case SLIDES[Status.index(status)] {
       Just(entry) => entry.render()
@@ -594,5 +598,13 @@ store Application {
     SLIDES
     |> Array.slice(0, Status.index(status))
     |> Array.reduce(0, (acc : Number, entry : Slide) { acc + entry.duration })
+  }
+
+  get currentIndex : Number {
+    Status.index(status)
+  }
+
+  get slideCount : Number {
+    Array.size(SLIDES)
   }
 }

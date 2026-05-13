@@ -41,6 +41,6 @@ component Slides.Decoders {
     MINT
 
   fun render {
-    <Slide.Live heading="Decoders: typed Objects, no library" code={CODE}/>
+    <Slide.Live heading=<>"Decoders - typed objects, no library"</> code={CODE}/>
   }
 }

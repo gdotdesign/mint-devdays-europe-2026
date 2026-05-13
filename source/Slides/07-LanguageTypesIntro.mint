@@ -1,8 +1,5 @@
 component Slides.LanguageTypesIntro {
   fun render {
-    <Slide.SectionDivider
-      eyebrow="Part 1"
-      title="The language"
-    />
+    <Slide.SectionDivider title="The Language" eyebrow="Part 1"/>
   }
 }

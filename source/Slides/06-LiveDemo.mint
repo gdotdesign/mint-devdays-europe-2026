@@ -31,6 +31,6 @@ component Slides.LiveDemo {
     MINT
 
   fun render {
-    <Slide.Live heading="Hello, Mint." code={CODE}/>
+    <Slide.Live heading=<>"Hello, Mint"</> code={CODE}/>
   }
 }

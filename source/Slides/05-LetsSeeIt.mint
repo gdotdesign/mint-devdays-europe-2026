@@ -1,8 +1,5 @@
 component Slides.LetsSeeIt {
   fun render {
-    <Slide.SectionDivider
-      eyebrow="Demo"
-      title="Let's see it"
-    />
+    <Slide.SectionDivider title="Let's see it!" eyebrow="Demo"/>
   }
 }

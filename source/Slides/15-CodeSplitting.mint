@@ -35,6 +35,14 @@ component Slides.CodeSplitting {
     MINT
 
   fun render {
-    <Slide.Live heading="Code splitting: `async` and `defer`" code={CODE}/>
+    <Slide.Live
+      code={CODE}
+      heading=<>
+        "Code splitting with "
+        <b>"async"</b>
+        " and "
+        <b>"defer"</b>
+      </>
+    />
   }
 }

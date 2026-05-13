@@ -20,7 +20,7 @@ component Slides.Initial {
       <div::logo><Logo/></div>
 
       <div::slogan>
-        "The programming language for writing single page applications"
+        "The programming language for writing single page applications."
       </div>
     </Slide>
   }
