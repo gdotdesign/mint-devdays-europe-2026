@@ -1,7 +1,8 @@
 component Slide.Live {
   property scale : Number = 1.2
   property heading : Html
-  property code : String
+  property code : String = ""
+  property files : Array(LessonFile) = []
 
   style root {
     grid-template-rows: auto 1fr;
@@ -33,7 +34,7 @@ component Slide.Live {
     <Slide>
       <div::root>
         <div::heading>heading</div>
-        <div::editorWrap><LiveEditor initialContents={code} scale={scale}/></div>
+        <div::editorWrap><LiveEditor initialContents={code} files={files} scale={scale}/></div>
       </div>
     </Slide>
   }

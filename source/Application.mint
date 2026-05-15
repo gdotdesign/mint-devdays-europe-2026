@@ -416,6 +416,73 @@ store Application {
           TEXT
       },
       {
+        render: () { <Slides.HereDocuments/> },
+        position: "lectern — point at the `<<` openers",
+        duration: 90,
+        notes:
+          <<~TEXT
+          Here documents. Multi-line strings without escape-quote soup —
+          and three flavors. (point at each opener)
+
+          '<<-' keeps your indentation verbatim. '<<~' strips the
+          smallest leading indent from every line, so you can indent the
+          body to match the surrounding code and still get a clean
+          string. (pause)
+
+          And '<<#MARKDOWN' parses the body at compile time and gives
+          you 'Html' back. The website site and the docs are written
+          this way — Markdown straight in source, type-checked, no
+          runtime parser. Three openers, one feature.
+          TEXT
+      },
+      {
+        render: () { <Slides.Directives/> },
+        position: "lectern — point at the three `@` calls",
+        duration: 90,
+        notes:
+          <<~TEXT
+          Directives. Things that run at compile time, starting with '@'.
+          Three in one component, reaching out to two files next to
+          'Main.mint'. (point at the file tabs)
+
+          (point at '@svg') Takes an SVG file and inlines it as Html —
+          one fewer HTTP request, and it picks up your CSS, so I can
+          color it from the component's style block.
+
+          (point at '@inline') Pastes the file's contents in as a
+          String, at compile time. The text is baked into the bundle.
+
+          (point at '@asset') Doesn't inline — gives you a hashed path
+          and tells the bundler to ship the file alongside. The
+          download link works because the file is really there.
+
+          There are more — '@format', '@highlight', '@size' — but the
+          shape is the same: the compiler resolves them before anything
+          ships.
+          TEXT
+      },
+      {
+        render: () { <Slides.Locale/> },
+        position: "lectern — point at the `locale` blocks",
+        duration: 90,
+        notes:
+          <<~TEXT
+          Locale. Internationalization as a language feature.
+
+          (point at the two 'locale' blocks) You declare translations
+          per language — ISO codes, nested keys, values can be plain
+          strings or functions. (point at ':ui.greet') And you reference
+          them with a colon literal. The compiler checks that every
+          language has the same tokens with the same types — add a key
+          to 'en' and forget it in 'hu', it won't build.
+
+          'Locale.set' swaps the active language at runtime and
+          everything re-renders. (click the buttons) No i18n library,
+          no JSON files to keep in sync, no missing-key bugs at
+          runtime.
+          TEXT
+      },
+      {
         render: () { <Slides.FeatureMatrix/> },
         position: "step back from lectern — sweep a hand across the matrix",
         duration: 45,

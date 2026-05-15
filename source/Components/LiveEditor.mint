@@ -1,10 +1,16 @@
 component LiveEditor {
-  property initialContents : String
+  property initialContents : String = ""
+  property files : Array(LessonFile) = []
   property scale : Number = 1
 
   state project : Project =
     {
-      files: [{ path: "Main.mint", contents: initialContents, solution: "" }],
+      files:
+        if Array.isEmpty(files) {
+          [{ path: "Main.mint", contents: initialContents, solution: "" }]
+        } else {
+          files
+        },
       activeFile: "Main.mint"
     }
 
