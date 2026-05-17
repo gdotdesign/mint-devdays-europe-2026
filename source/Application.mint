@@ -48,7 +48,7 @@ store Application {
           That's a fair question and I'll answer it honestly. The short version:
           building a frontend today means gluing together a framework, a state
           manager, a router, a styling solution, a build tool, a testing setup —
-          and praying they all agree.
+          and praying they all work together.
 
           Mint replaces that whole stack with one language. One way to do
           things. No glue.
@@ -77,7 +77,7 @@ store Application {
           Mint is specifically about single-page applications — the kind
           with routing, state, forms, real-time updates, and all.
 
-          And here's what shipping one of those actually looks like in 2026.
+          And here's what shipping one of those actually looks like today.
 
           - A framework.
           - A type system.
@@ -91,8 +91,7 @@ store Application {
 
           A bunch of independent decisions, a bunch of tools that need to agree
           on conventions, configs, and versions. And we haven't even talked
-          about the app yet. This is the soup we're swimming in — and it's the
-          thing Mint is reacting to.
+          about the app yet. This is the complexity Mint was built to address.
           TEXT
       },
       {
@@ -126,7 +125,8 @@ store Application {
           <<~TEXT
           This is a live editor — what you type compiles locally and shows on
           the right. It uses the built in language server (what every other IDE
-          would use) for syntax highlighting, editing and compiling. (pause)
+          would use) for syntax highlighting, editing and compiling. And it does
+          this over a websocket connection. (pause)
 
           'component Main'
             -> This is the thing that gets rendered on the screen, components
@@ -170,7 +170,9 @@ store Application {
         duration: 75,
         notes:
           <<~TEXT
-          Types. Two similar shapes you'll see everywhere in Mint.
+          Mint is fundamentally a functional, strongaly tyepd language.
+          And as usual it has types. Two similar shapes you'll see everywhere in
+          Mint.
 
           Variants — a closed set of tags, some carry payloads. (point at
           `LoginResult`)
@@ -217,7 +219,7 @@ store Application {
         notes:
           <<~TEXT
           Styles. Real CSS, scoped to the component, and — this is one of the
-          fun parts — interpolated. (point at the background line)
+          fun parts — dynamic. (point at the if)
 
           That's a Mint expression inside the CSS. The style reacts to state
           without you wiring up class toggles. No CSS-in-JS framework, no
@@ -375,9 +377,6 @@ store Application {
           (pause) That's most of the CLI. No bundler config, no linter
           config, no formatter config, no test runner config. There's
           nothing to configure because there's nothing to choose.
-
-          TODO: capture assets/mint-cli.png — 'mint --help' output showing
-          the subcommand list.
           TEXT
       },
       {
@@ -490,20 +489,17 @@ store Application {
           <<~TEXT
           A quick honesty slide before we wrap. (gesture at the matrix)
 
-          This is Mint compared to the usual suspects. The first few rows
+          This is Mint compared to the usual suspects. A few rows
           of a much longer table. One column per language, one row per
           feature, green where it exists.
 
           The point isn't any one row. The point is: there's a lot in the
-          language I didn't have time to show you. Pattern guards, pipes,
+          language I didn't have time to show you. Pattern matching, pipes,
           tuples, string interpolation, default arguments, structural
           equality — most of what you'd expect from a modern typed
           language, and a few things you wouldn't.
 
           (pause) Eighty rows so far — the full matrix is on mint-lang.com.
-
-          TODO: capture assets/feature-matrix.png — the language comparison
-          matrix from mint-lang.com.
           TEXT
       },
       {
@@ -563,7 +559,7 @@ store Application {
           <<~TEXT
           Number two: mint-lang.com itself. The marketing site, the docs,
           the playground — all Mint. Different shape of app —
-          content-heavy, SEO-conscious, lots of static pages. Same
+          content-heavy, SEO-conscious, lots of pages. Same
           language.
 
           And this is where the 'async component' and 'defer' keywords
@@ -581,7 +577,7 @@ store Application {
         notes:
           <<~TEXT
           The two questions. Why another language? Because the stack we
-          have is a soup of tools that have to negotiate, and one language
+          have is a patchwork of tools that have to negotiate, and one language
           replaces that with one way to do each thing. Also having a compiler
           access to everything makes it tight and error free.
 
