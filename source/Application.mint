@@ -610,15 +610,35 @@ store Application {
     goToSlide(Math.max(Status.index(status) - 1, 0))
   }
 
+  /* True when this document is the display embedded in the presenter's
+     iframe. Such a context is a passive mirror — it must not touch the URL,
+     since pushing history there feeds the browser's back/forward buttons. */
+  fun isEmbedded : Bool {
+    `(window.self !== window.top)`
+  }
+
   fun goToSlide (index : Number) {
     if index != Status.index(status) {
       BroadcastChannel.send(channel, encode index)
-      Window.navigate(Status.path(Status.set(status, index)))
+
+      if isEmbedded() {
+        setStatus(Status.set(status, index))
+      } else {
+        Window.navigate(Status.path(Status.set(status, index)))
+      }
     }
   }
 
-  fun setStatus (status : Status) {
-    next { status: status }
+  /* Called by the routes block on every URL change, including the browser's
+     back/forward buttons. When the slide index changes in a top-level window
+     (presenter or standalone display), broadcast it so the embedded display
+     iframe follows. The iframe stays passive — it never re-broadcasts. */
+  fun setStatus (newStatus : Status) {
+    if !isEmbedded() && Status.index(newStatus) != Status.index(status) {
+      BroadcastChannel.send(channel, encode Status.index(newStatus))
+    }
+
+    next { status: newStatus }
   }
 
   fun openPresenter {

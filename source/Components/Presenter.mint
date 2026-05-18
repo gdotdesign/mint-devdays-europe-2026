@@ -12,6 +12,13 @@ component Presenter {
 
   state lastSeenIndex = -1
 
+  /*
+  The slide the iframe loads on, captured once so `src` stays constant —
+     binding it to the live index would reload the iframe on every slide
+     change. State initializers run once, so this freezes the mount value.
+  */
+  state initialIndex = Status.index(status)
+
   state talkStartedAt = 0
   state talkElapsed = 0
 
@@ -115,15 +122,16 @@ component Presenter {
     background: #FCFCFC;
   }
 
-  style slide-scale {
+  style slide-frame {
     transform-origin: top left;
     transform: scale(0.5);
 
+    aspect-ratio: 1920 / 1060;
     position: absolute;
-    height: 100vh;
     width: 100vw;
-    top: 0;
+    border: 0;
     left: 0;
+    top: 0;
   }
 
   style sidebar {
@@ -197,9 +205,7 @@ component Presenter {
 
   fun render : Html {
     <div::root>
-      <div::slide>
-        <div::slide-scale><Display/></div>
-      </div>
+      <div::slide><iframe::slide-frame src="/#{initialIndex}"/></div>
 
       <div::sidebar>
         <div::position>position</div>
