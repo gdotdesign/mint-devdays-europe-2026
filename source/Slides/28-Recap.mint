@@ -22,7 +22,7 @@ component Slides.Recap {
     grid-row-gap: 2vmax;
     grid-column-gap: 1.5vmax;
     display: grid;
-    max-width: 60ch;
+    max-width: 70ch;
     margin: 0 auto;
   }
 
