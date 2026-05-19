@@ -1,0 +1,607 @@
+.a {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 5%;
+  aspect-ratio: 100 / 24;
+  width: 100%;
+}
+
+.a svg:first-child {
+  flex: 0 0 24%;
+  height: auto;
+}
+
+.a svg:last-child {
+  flex: 0 0 50%;
+  height: auto;
+}
+
+.b {
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.c {
+  position: absolute;
+}
+
+.d {
+  background-image: var(--a-a);
+  transform-origin: 80px 0;
+  animation-delay: 3s;
+  height: 100px;
+  width: 260px;
+  left: -15px;
+  top: -10px;
+}
+
+.e {
+  background-image: var(--b-a);
+  transform-origin: 115px 0;
+  height: 159px;
+  width: 200px;
+  right: -15px;
+  top: -10px;
+}
+
+.f {
+  background-image: var(--c-a);
+  transform-origin: 140px 100px;
+  animation-delay: 3s;
+  height: 100px;
+  bottom: -10px;
+  width: 260px;
+  right: -15px;
+}
+
+.g {
+  background-image: var(--d-a);
+  transform-origin: 20px 159px;
+  height: 159px;
+  bottom: -10px;
+  width: 200px;
+  left: -15px;
+}
+
+.h {
+  place-content: center;
+  display: grid;
+}
+
+.i {
+  font-family: Forum;
+  font-size: 5vmax;
+}
+
+.j {
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  display: flex;
+  gap: 1vmax;
+}
+
+.k {
+  text-transform: uppercase;
+  letter-spacing: 0.4vmax;
+  font-family: Noto Sans;
+  font-size: 1.5vmax;
+  opacity: 0.55;
+}
+
+.l {
+  font-family: Forum;
+  font-size: 6vmax;
+  line-height: 1;
+}
+
+.m {
+  font-family: Forum;
+  text-align: center;
+  font-size: 3vmax;
+  margin-bottom: 3vmax;
+  opacity: 0.85;
+}
+
+.n {
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  display: grid;
+  gap: 1.5vmax;
+}
+
+.o {
+  font-family: Forum;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.4vmax;
+  margin-top: 2.5vmax;
+  opacity: 0.6;
+}
+
+.p {
+  border: 2px solid currentColor;
+  padding: 1.5vmax 2.5vmax;
+  border-radius: 0.5vmax;
+  font-family: Forum;
+  min-width: 12ch;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  display: grid;
+  gap: 0.8vmax;
+}
+
+.q {
+  color: #2e8b57;
+}
+
+.q svg {
+  position: relative;
+  top: 0.15vmax;
+  height: 2vmax;
+  width: 2vmax;
+}
+
+.r {
+  text-align: left;
+  display: grid;
+  gap: 0.2vmax;
+}
+
+.s {
+  font-size: 2vmax;
+}
+
+.t {
+  font-size: 1.2vmax;
+  opacity: 0.55;
+}
+
+.u {
+  place-content: center;
+  grid-row-gap: 3vmax;
+  display: grid;
+  width: 70vw;
+}
+
+.v {
+  width: 30vmax;
+  margin: 0 auto;
+}
+
+.w {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 2vmax 4vmax;
+  font-family: "Fira Code", monospace;
+  font-size: 1.4vmax;
+  opacity: 0.75;
+}
+
+.x {
+  align-items: center;
+  display: flex;
+  gap: 0.5vmax;
+}
+
+.x svg {
+  height: 1.6vmax;
+  width: 1.6vmax;
+}
+
+.y {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+}
+
+.z {
+  transform: translateX(-50%);
+  position: fixed;
+  bottom: 1vmax;
+  left: 50%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  align-items: center;
+  display: flex;
+  gap: 0.5vmax;
+  padding: 0.5vmax 1.2vmax;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9vmax;
+  color: #333;
+  opacity: 0.35;
+  transition: opacity 200ms ease;
+}
+
+.z:hover {
+  opacity: 1;
+}
+
+.aa {
+  font-variant-numeric: tabular-nums;
+  padding: 0.3vmax 0.8vmax;
+}
+
+.ab {
+  background: rgba(0, 0, 0, 0.15);
+  height: 1.4vmax;
+  width: 1px;
+}
+
+.ac {
+  align-items: center;
+  display: flex;
+  gap: 0.4vmax;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  color: inherit;
+  border: 0;
+  padding: 0.3vmax 0.8vmax;
+  font: inherit;
+}
+
+.ac:hover {
+  background: #FCFCFC;
+}
+
+.ac svg {
+  height: 1.1vmax;
+  width: 1.1vmax;
+}
+
+.ad {
+  width: 30vmax;
+  margin: 0 auto;
+  margin-bottom: 1.5vmax;
+}
+
+.ae {
+  font-family: Forum;
+  font-size: 2.5vmax;
+  text-align: center;
+  max-width: 30ch;
+  opacity: 0.85;
+}
+
+.af {
+  font-family: Forum;
+  text-align: center;
+  font-size: 3vmax;
+  margin-bottom: 3vmax;
+  opacity: 0.85;
+}
+
+.ag {
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  display: grid;
+  gap: 1.5vmax;
+}
+
+.ah {
+  font-family: Forum;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.4vmax;
+  margin-top: 2.5vmax;
+  opacity: 0.6;
+}
+
+.ai {
+  border: 2px solid currentColor;
+  padding: 1.5vmax 2.5vmax;
+  border-radius: 0.5vmax;
+  font-family: Forum;
+  min-width: 12ch;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  display: grid;
+  gap: 0.8vmax;
+}
+
+.aj {
+  color: #b86b00;
+}
+
+.aj svg {
+  position: relative;
+  top: 0.15vmax;
+  height: 2vmax;
+  width: 2vmax;
+}
+
+.ak {
+  text-align: left;
+  display: grid;
+  gap: 0.2vmax;
+}
+
+.al {
+  font-size: 2vmax;
+}
+
+.am {
+  font-size: 1.2vmax;
+  opacity: 0.55;
+}
+
+.an {
+  background: #FCFCFC;
+  display: grid;
+  color: #222;
+}
+
+.ao {
+  position: relative;
+  display: grid;
+  z-index: 1;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ap {
+  min-height: 0;
+  display: grid;
+  border: var(--e-a);
+}
+
+.aq {
+  grid-template-rows: auto 1fr;
+  place-content: center;
+  grid-row-gap: 2vmax;
+  display: grid;
+  width: 90vw;
+  height: 80vh;
+}
+
+.ar {
+  font-family: Forum;
+  text-align: center;
+  font-size: 3vmax;
+  opacity: 0.85;
+}
+
+.as {
+  border: 1px solid var(--border-color);
+  object-fit: contain;
+  max-height: 65vh;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.at {
+  place-content: center;
+  grid-row-gap: 3vmax;
+  display: grid;
+  width: 90vw;
+  height: 80vh;
+}
+
+.au {
+  font-family: Forum;
+  text-align: center;
+  font-size: 3vmax;
+  opacity: 0.85;
+}
+
+.av {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-content: center;
+  grid-gap: 1.2vmax;
+  display: grid;
+}
+
+.aw {
+  font-family: "Fira Code", monospace;
+  font-size: 1.4vmax;
+  border: 2px solid currentColor;
+  border-radius: 0.5vmax;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  display: grid;
+  gap: 0.8vmax;
+  padding: 1vmax 1.2vmax;
+}
+
+.ax svg {
+  height: 2vmax;
+  width: 2vmax;
+}
+
+.ay {
+  overflow: hidden;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+.az {
+  transform-origin: top left;
+  transform: var(--f-a);
+  height: var(--f-b);
+  width: var(--f-c);
+  min-height: 0;
+  display: grid;
+}
+
+.ba {
+  grid-template-rows: auto 1fr;
+  display: grid;
+  height: 80vh;
+  width: 90vw;
+  gap: 2vmin;
+}
+
+.bb {
+  font-family: Forum;
+  text-align: center;
+  font-size: 3vmax;
+  opacity: 0.85;
+}
+
+.bb b {
+  font-weight: normal;
+  color: #277944;
+}
+
+.bc {
+  font-size: 1.4vmin;
+  min-height: 0;
+  display: grid;
+}
+
+.bd {
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  display: grid;
+  gap: 0.5vmax;
+  background: #111;
+  padding: 1vmax;
+  height: 100vh;
+  width: 100vw;
+  color: #EEE;
+  font-family: Noto Sans;
+  box-sizing: border-box;
+}
+
+.be {
+  border-radius: 0.25vmax;
+  aspect-ratio: 16 / 9;
+  place-self: center;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  background: #FCFCFC;
+}
+
+.bf {
+  transform-origin: top left;
+  transform: scale(0.5);
+  aspect-ratio: 1920 / 1060;
+  position: absolute;
+  width: 100vw;
+  border: 0;
+  left: 0;
+  top: 0;
+}
+
+.bg {
+  grid-template-rows: auto 1fr auto;
+  display: grid;
+  gap: 0.5vmax;
+  min-height: 0;
+}
+
+.bh {
+  border-radius: 0.25vmax;
+  background: #1A1A1A;
+  padding: 1vmax;
+  font-family: "Fira Code", monospace;
+  white-space: pre-wrap;
+  font-size: 1vmax;
+  line-height: 1.5;
+  overflow: auto;
+  min-height: 0;
+}
+
+.bi {
+  grid-template-columns: 1fr 1fr;
+  font-variant-numeric: tabular-nums;
+  display: grid;
+  gap: 0.5vmax;
+}
+
+.bj {
+  align-items: center;
+  display: grid;
+  gap: 0.5vmax;
+  border-radius: 0.25vmax;
+  background: #1A1A1A;
+  padding: 1vmax;
+}
+
+.bk {
+  text-transform: uppercase;
+  letter-spacing: 0.1vmax;
+  font-size: 0.75vmax;
+  text-align: center;
+  color: #888;
+}
+
+.bl {
+  text-align: center;
+  font-size: 2vmax;
+}
+
+.bm {
+  text-align: center;
+  font-size: 1vmax;
+  color: #888;
+}
+
+.bn {
+  padding: 0.75vmax 1vmax;
+  border-radius: 0.25vmax;
+  background: #1A1A1A;
+  text-align: center;
+  font-style: italic;
+  font-size: 1vmax;
+  color: #BBB;
+}
+
+.bo {
+  place-content: center;
+  grid-row-gap: 3vmax;
+  display: grid;
+  width: 80vw;
+  height: 80vh;
+}
+
+.bp {
+  font-family: Forum;
+  text-align: center;
+  font-size: 3.5vmax;
+  opacity: 0.85;
+}
+
+.bq {
+  grid-template-columns: auto 1fr;
+  align-content: center;
+  align-items: center;
+  grid-row-gap: 2vmax;
+  grid-column-gap: 1.5vmax;
+  display: grid;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+.br {
+  color: #2e8b57;
+}
+
+.br svg {
+  height: 3vmax;
+  width: 3vmax;
+}
+
+.bs {
+  font-family: Forum;
+  font-size: 2.5vmax;
+}
