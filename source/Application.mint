@@ -61,7 +61,7 @@ store Application {
         notes:
           <<~TEXT
           And the second question. I know — a lot of talks at this conference
-          is about AI so I'll keep this short and there's no live AI demo in
+          is about AI so I'll keep this short. There's no live AI demo in
           this talk. One slide near the end on why it works well, that's it.
 
           We'll come back to both questions before we wrap.
@@ -90,7 +90,7 @@ store Application {
           - ..and a lot more things.(pause and let the audience read)
 
           A bunch of independent decisions, a bunch of tools that need to agree
-          on conventions, configs, and versions. And we haven't even talked
+          on conventions, configurations, and versions. And we haven't even talked
           about the app yet. This is the complexity Mint was built to address.
           TEXT
       },
@@ -115,7 +115,7 @@ store Application {
         render: () { <Slides.LetsSeeIt/> },
         position: "stage center — beat before the demo",
         duration: 15,
-        notes: "So the most important question: what does it look like?"
+        notes: "So what does it look like?"
       },
       {
         render: () { <Slides.LiveDemo/> },
@@ -123,10 +123,10 @@ store Application {
         duration: 120,
         notes:
           <<~TEXT
-          This is a live editor — what you type compiles locally and shows on
-          the right. It uses the built in language server (what every other IDE
-          would use) for syntax highlighting, editing and compiling. And it does
-          this over a websocket connection. (pause)
+          This is a live editor — what you type compiles on the sandbox server
+          and shows the running app on the right. It uses the built in language
+          server (what every other IDE would use) for syntax highlighting, editing
+          and compiling. And it does this over a websocket connection. (pause)
 
           'component Main'
             -> This is the thing that gets rendered on the screen, components
@@ -543,10 +543,10 @@ store Application {
         duration: 90,
         notes:
           <<~TEXT
-          Number one: this. The slides you've been watching are a Mint
+          First one: this. The slides you've been watching are a Mint
           app. Routing, state, broadcast channel between presenter window
-          and main window, scoped styles, all of it. ~200 lines, builds in
-          1second.
+          and main window, scoped styles, all of it. ~2000 lines, builds in
+          ~1second.
 
           (show the presenter view and some of it in the editor)
           TEXT

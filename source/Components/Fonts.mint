@@ -33,7 +33,7 @@ component Fonts {
       }
 
       @font-face {
-        src: url(#{@asset(/assets/fonts/forum-v18-latin_latin-ext-regular.woff2)}
+        src: url(#{@asset(/assets/fonts/forum-v18-latin_latin-ext-regular.woff2)})
              format('woff2');
 
         font-family: 'Forum';
